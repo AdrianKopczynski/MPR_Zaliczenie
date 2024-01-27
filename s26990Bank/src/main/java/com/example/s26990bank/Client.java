@@ -1,5 +1,6 @@
 package com.example.s26990bank;
-
+import java.util.ArrayList;
+import java.util.List;
 public class Client {
     public int ID;
     public String name;
@@ -10,6 +11,7 @@ public class Client {
         this.name = name;
         this.saldo = saldo;
     }
+
     public int getID(){
         return ID;
     }
@@ -19,5 +21,11 @@ public class Client {
     public void setName(){
         this.name = name;
     }
-    
+    public float getSaldo(){
+        return saldo;
+    }
+    public void setSaldo(){
+        this.saldo = saldo;
+    }
+
 }
