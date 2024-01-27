@@ -9,7 +9,7 @@ public class S26990BankApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(S26990BankApplication.class, args);
-        initProcess();
+        //initProcess();
     }
     public static void initProcess(){
         Register.registerNewClient("Adam",242.43f);

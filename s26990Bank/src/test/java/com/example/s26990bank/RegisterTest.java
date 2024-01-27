@@ -3,10 +3,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest
 public class RegisterTest {
@@ -21,13 +23,16 @@ public class RegisterTest {
     void setup(){
         this.allClients = new ArrayList<>();
         this.register = new Register(allClients);
-
     }
 
     @Test
     void doesClientAdded(){
         Register.registerNewClient("Bartosz",200.00f);
-        assertThat(!allClients.isEmpty());
+        assertFalse(allClients.isEmpty());
+    }
+    @Test
+    void doesClientNotAdded(){
+        assertThat(allClients.isEmpty());
     }
 
 }
